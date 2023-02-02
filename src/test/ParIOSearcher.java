@@ -25,7 +25,7 @@ public class ParIOSearcher {
         List<Future<Boolean>> futures = new ArrayList<>();
     
         for (String fileName : fileNames) {
-            Future<Boolean> future = cachedPool.submit(() -> ioSearcher.search(word, fileName));
+            Future<Boolean> future = completionService.submit(() -> ioSearcher.search(word, fileName));
             futures.add(future);
         }
     
