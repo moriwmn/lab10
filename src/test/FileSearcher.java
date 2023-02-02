@@ -1,4 +1,4 @@
-package search;
+package test;
 
 public interface FileSearcher {
 	public boolean search(String word, String...fileNames);	
